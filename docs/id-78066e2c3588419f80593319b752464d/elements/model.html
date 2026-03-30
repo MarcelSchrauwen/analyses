@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Eerste Hulp bij Architectuur Vraagstukken</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.4.1.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Eerste Hulp bij Architectuur Vraagstukken</b>
+
+            <!-- If a View with Viewpoint -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+                       <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-purpose"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+                    <!-- Analysis -->
+
+						<li role="presentation"><a href="#query" aria-controls="query" role="tab" data-toggle="tab" class="i18n-query"></a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">Een persoonlijke omgeving om diverse onderwerpen te analyseren, zowel inhoudelijk als in hun onderlinge relaties. De scope richt zich op Europese (EU&#8209;gerelateerde) ontwikkelingen met impact op Nederland, met daarbij een specifieke focus op interoperabiliteit binnen de zorg.</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="analysis">
+						<table class="table table-striped table-hover table-condensed" id="used-in-views">
+							<thead>
+								<tr><th colspan="2" class="i18n-used-in-views" /></tr>
+								<tr>
+									<th class="i18n-name"></th>
+									<th class="i18n-viewpoint"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<table class="table table-striped table-hover table-condensed" id="model-relations">
+							<thead>
+								<tr><th colspan="4" class="i18n-model-relations" /></tr>
+								<tr>
+									<th class="i18n-name"></th>
+									<th class="i18n-type"></th>
+									<th class="i18n-source"></th>
+									<th class="i18n-target"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="query">
+						<br>
+						<style>
+						#myprompt {
+						    width: 80%;
+						    font-family: Consolas,Monaco, monospace;
+						}
+						</style>
+
+						<div id='myconsole'></div>
+
+						<p>
+							<tt><span id="useid">alasql</span> &gt;</tt> <input id='myprompt' autofocus/> 
+						</p>
+
+						<script src='../../lib/alasql/alasql.min.js'></script>
+
+						<script>
+							function decodeURL(s) {
+								return decodeURIComponent(s.replace(/\+/g, "%20"));
+							}
+
+							var first = decodeURI(location.search.substr(1));
+						 	alasql.options.logtarget = 'myconsole';
+							alasql.prompt('myprompt','useid');
+							alasql.prompt('myprompt','useid', first);
+
+							var dataElements = [ ];	  
+						  	var dataProperties = [ ];
+						 	var dataRelationships = [ ];
+						 	var dataViews = [ ];
+						 	var dataViewsContent = [ ];
+						 	var dataFolders = [ ];
+						 	var dataFoldersContent = [ ];
+
+							dataFolders.push({id:"id-78066e2c3588419f80593319b752464d", type:"ArchimateModel", name:decodeURL("Eerste+Hulp+bij+Architectuur+Vraagstukken"), documentation:decodeURL("")});
+								dataFoldersContent.push({folderid:"id-78066e2c3588419f80593319b752464d", contentid:"id-0284d071efdc4d4ebc7a8311caf67c0f", contenttype:"Folder"});
+								dataFolders.push({id:"id-0284d071efdc4d4ebc7a8311caf67c0f", type:"Folder", name:decodeURL("Strategy"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-78066e2c3588419f80593319b752464d", contentid:"id-021746408642474ca7c36761c1fb9450", contenttype:"Folder"});
+								dataFolders.push({id:"id-021746408642474ca7c36761c1fb9450", type:"Folder", name:decodeURL("Business"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-78066e2c3588419f80593319b752464d", contentid:"id-612c5a28804d4e1681067a500b1f9e03", contenttype:"Folder"});
+								dataFolders.push({id:"id-612c5a28804d4e1681067a500b1f9e03", type:"Folder", name:decodeURL("Application"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-78066e2c3588419f80593319b752464d", contentid:"id-ad44886221ae462b88a9d11732d7fc08", contenttype:"Folder"});
+								dataFolders.push({id:"id-ad44886221ae462b88a9d11732d7fc08", type:"Folder", name:decodeURL("Technology+%26+Physical"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-78066e2c3588419f80593319b752464d", contentid:"id-0e4038b19e254df2920185de2ceb6f6b", contenttype:"Folder"});
+								dataFolders.push({id:"id-0e4038b19e254df2920185de2ceb6f6b", type:"Folder", name:decodeURL("Motivation"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-0e4038b19e254df2920185de2ceb6f6b", contentid:"id-ef9089b617c64a768895ea61382d50af", contenttype:"Folder"});
+									dataFolders.push({id:"id-ef9089b617c64a768895ea61382d50af", type:"Folder", name:decodeURL("European+Interoperability+Framework+%28EIF%29"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-ef9089b617c64a768895ea61382d50af", contentid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contenttype:"Folder"});
+										dataFolders.push({id:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", type:"Folder", name:decodeURL("Principles"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contentid:"id-eb5bc19200d54e1f8c29940c45861dc5", contenttype:"Principle"});
+												dataElements.push({id:"id-eb5bc19200d54e1f8c29940c45861dc5", type:"Principle", specialization:decodeURL(""), name:decodeURL("P01+-+Subsidatiteit+en+proportionaliteit"), documentation:decodeURL("Subsidatiteit+houdt+in+dat+besluiten+binnen+de+EU+zo+dicht+mogelijk+bij+de+burger+worden+genomen.+Met+andere+woorden%3A+de+EU+onderneemt+alleen+actie+als+dit+effectiever+is+dan+wanneer+dezelfde+actie+op+nationaal+niveau+zou+worden+uitgevoerd.+Het+proportionaliteitsprincipe+bepaalt+bovendien+dat+EU%E2%80%91maatregelen+niet+verder+mogen+gaan+dan+nodig+is+om+de+doelstellingen+van+de+verdragen+te+bereiken.%0D%0A%0D%0ASubsidatiteit+-+Doe+iets+pas+op+EU+niveau+als+het+niet+goed+genoeg+lukt+op+nationaal+niveau.%0D%0AProportionaliteit+-+Gebruik+niet+meer+maatregelen+dan+nodig+zijn+om+je+doel+te+bereiken.")});
+															dataProperties.push({conceptid:"id-eb5bc19200d54e1f8c29940c45861dc5", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contentid:"id-84c74c33b2ea4581a10ed7552f0996cd", contenttype:"Principle"});
+												dataElements.push({id:"id-84c74c33b2ea4581a10ed7552f0996cd", type:"Principle", specialization:decodeURL(""), name:decodeURL("P02+-+Openheid"), documentation:decodeURL("Openheid+heeft+vooral+betrekking+op+gegevens%2C+specificaties+en+software.+Open+overheidsdata+%28hier+eenvoudigweg+%E2%80%98open+data%E2%80%99+genoemd%29+verwijst+naar+het+idee+dat+alle+publieke+gegevens+vrij+beschikbaar+zouden+moeten+zijn+voor+gebruik+en+hergebruik+door+anderen%2C+tenzij+er+beperkingen+gelden%2C+bijvoorbeeld+ter+bescherming+van+persoonsgegevens%2C+vertrouwelijkheid+of+intellectuele%E2%80%91eigendomsrechten.")});
+															dataProperties.push({conceptid:"id-84c74c33b2ea4581a10ed7552f0996cd", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contentid:"id-03e6efdb790b427593fcb30bfdf58fae", contenttype:"Principle"});
+												dataElements.push({id:"id-03e6efdb790b427593fcb30bfdf58fae", type:"Principle", specialization:decodeURL(""), name:decodeURL("P03+-+Zichtbaarheid"), documentation:decodeURL("Zichtbaarheid+gaat+over+het+mogelijk+maken+dat+anderen+binnen+%C3%A9n+buiten+de+overheid+inzicht+krijgen+in+wat+er+in+een+overheidsorganisatie+gebeurt.+Dit+houdt+in+dat+andere+overheden%2C+inwoners+en+bedrijven+de+regels%2C+processen%2C+gegevens%2C+diensten+en+besluitvorming+kunnen+bekijken+en+begrijpen.")});
+															dataProperties.push({conceptid:"id-03e6efdb790b427593fcb30bfdf58fae", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contentid:"id-ca337e28c66845b3bdbda93d43284aab", contenttype:"Principle"});
+												dataElements.push({id:"id-ca337e28c66845b3bdbda93d43284aab", type:"Principle", specialization:decodeURL(""), name:decodeURL("P04+-+Herbruikbaarheid"), documentation:decodeURL("Interfaces%2C+standaarden%2C+informatie+en+gegevens+vormen+belangrijke+bouwstenen+voor+interoperabiliteit+en+verhogen+de+kwaliteit+van+samenwerking.+Ze+maken+breder+gebruik+mogelijk+van+bestaande+voorzieningen+en+besparen+daarbij+tijd+%C3%A9n+geld.+Hiermee+leveren+zij+een+belangrijke+bijdrage+aan+de+ontwikkeling+van+een+Europese+digitale+interne+markt.")});
+															dataProperties.push({conceptid:"id-ca337e28c66845b3bdbda93d43284aab", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contentid:"id-12c87975916c4ebf881611e420e4a0ee", contenttype:"Principle"});
+												dataElements.push({id:"id-12c87975916c4ebf881611e420e4a0ee", type:"Principle", specialization:decodeURL(""), name:decodeURL("P05+-+Technologische+neutraliteit+en+gegevensportabiliteit"), documentation:decodeURL("Bij+het+opzetten+van+Europese+publieke+diensten+moeten+overheidsorganisaties+zich+richten+op+functionele+behoeften+en+beslissingen+over+technologie+zo+lang+mogelijk+uitstellen%2C+om+technologische+afhankelijkheden+te+beperken+en+te+voorkomen+dat+specifieke+technische+implementaties+of+producten+aan+betrokken+partijen+worden+opgelegd.")});
+															dataProperties.push({conceptid:"id-12c87975916c4ebf881611e420e4a0ee", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contentid:"id-1f9f9c13d08e4f9a8edbd2ee0db5185e", contenttype:"Principle"});
+												dataElements.push({id:"id-1f9f9c13d08e4f9a8edbd2ee0db5185e", type:"Principle", specialization:decodeURL(""), name:decodeURL("P06+-+Gebruikersgerichtheid"), documentation:decodeURL("Bij+het+bepalen+welke+publieke+diensten+moeten+worden+geleverd+en+hoe+deze+moeten+worden+aangeboden%2C+moet+rekening+worden+gehouden+met+de+behoeften+van+gebruikers.")});
+															dataProperties.push({conceptid:"id-1f9f9c13d08e4f9a8edbd2ee0db5185e", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contentid:"id-fbb0b6a834864558b9d4929745114f58", contenttype:"Principle"});
+												dataElements.push({id:"id-fbb0b6a834864558b9d4929745114f58", type:"Principle", specialization:decodeURL(""), name:decodeURL("P07+-+Inclusie+en+toegankelijkheid"), documentation:decodeURL("Inclusie+gaat+over+het+ervoor+zorgen+dat+iedereen+volledig+kan+profiteren+van+de+mogelijkheden+die+nieuwe+technologie%C3%ABn+bieden+om+toegang+te+krijgen+tot+en+gebruik+te+maken+van+Europese+publieke+diensten%2C+waarbij+sociale+en+economische+verschillen+en+uitsluiting+worden+overwonnen.+Toegankelijkheid+zorgt+ervoor+dat+mensen+met+een+beperking%2C+ouderen+en+andere+kwetsbare+groepen+publieke+diensten+kunnen+gebruiken+op+een+serviceniveau+dat+vergelijkbaar+is+met+dat+van+andere+burgers.")});
+															dataProperties.push({conceptid:"id-fbb0b6a834864558b9d4929745114f58", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contentid:"id-d0b5457477184ca6ab336f02f8c84d9d", contenttype:"Principle"});
+												dataElements.push({id:"id-d0b5457477184ca6ab336f02f8c84d9d", type:"Principle", specialization:decodeURL(""), name:decodeURL("P08+-+Beveiliging+en+privacy"), documentation:decodeURL("Burgers+en+bedrijven+moeten+erop+kunnen+vertrouwen+dat+zij%2C+wanneer+zij+met+overheidsinstanties+communiceren%2C+dit+doen+in+een+veilige+en+betrouwbare+omgeving+en+volledig+in+overeenstemming+met+de+relevante+regelgeving%2C+zoals+de+verordening+en+richtlijn+inzake+gegevensbescherming+en+de+verordening+over+elektronische+identificatie+en+vertrouwensdiensten.")});
+															dataProperties.push({conceptid:"id-d0b5457477184ca6ab336f02f8c84d9d", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contentid:"id-80a9f879e53743fdb349f27c3e5da161", contenttype:"Principle"});
+												dataElements.push({id:"id-80a9f879e53743fdb349f27c3e5da161", type:"Principle", specialization:decodeURL(""), name:decodeURL("P09+-+Meertaligheid"), documentation:decodeURL("Europese+publieke+diensten+kunnen+in+principe+door+iedereen+in+elke+lidstaat+worden+gebruikt.+Daarom+moet+bij+het+ontwerpen+daarvan+zorgvuldig+rekening+worden+gehouden+met+meertaligheid.+Burgers+in+Europa+ondervinden+vaak+problemen+bij+het+benaderen+en+gebruiken+van+digitale+publieke+diensten+als+deze+niet+beschikbaar+zijn+in+de+talen+die+zij+spreken.+Er+moet+een+balans+worden+gevonden+tussen+de+verwachtingen+van+burgers+en+bedrijven+om+in+hun+eigen+taal+of+voorkeurstaal+bediend+te+worden%2C+en+de+mogelijkheden+van+overheidsinstanties+in+de+lidstaten+om+diensten+in+alle+offici%C3%ABle+EU%E2%80%91talen+aan+te+bieden.")});
+															dataProperties.push({conceptid:"id-80a9f879e53743fdb349f27c3e5da161", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contentid:"id-367d7753beef4f0f887aeb48709bf2d1", contenttype:"Principle"});
+												dataElements.push({id:"id-367d7753beef4f0f887aeb48709bf2d1", type:"Principle", specialization:decodeURL(""), name:decodeURL("P10+-+Administratieve+vereenvoudiging"), documentation:decodeURL("Waar+mogelijk+zouden+overheidsorganisaties+moeten+streven+naar+het+stroomlijnen+en+vereenvoudigen+van+hun+administratieve+processen+door+deze+te+verbeteren+of+elk+proces+te+verwijderen+dat+geen+publieke+waarde+oplevert.+Administratieve+vereenvoudiging+kan+bedrijven+en+burgers+helpen+de+administratieve+lasten+te+verminderen+die+samenhangen+met+het+voldoen+aan+EU%E2%80%91wetgeving+of+nationale+verplichtingen.")});
+															dataProperties.push({conceptid:"id-367d7753beef4f0f887aeb48709bf2d1", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contentid:"id-ef30b103d16c4dff81ff894aba7d3429", contenttype:"Principle"});
+												dataElements.push({id:"id-ef30b103d16c4dff81ff894aba7d3429", type:"Principle", specialization:decodeURL(""), name:decodeURL("P11+-+Bewaring+van+informatie"), documentation:decodeURL("Wetgeving+vereist+dat+beslissingen+en+gegevens+worden+opgeslagen+en+gedurende+een+bepaalde+periode+toegankelijk+blijven.+Dit+betekent+dat+dossiers+en+informatie+in+elektronische+vorm+die+door+overheidsorganisaties+worden+bewaard+ter+documentatie+van+procedures+en+besluiten%2C+moeten+worden+behouden+en+indien+nodig+moeten+worden+omgezet+naar+nieuwe+dragers+wanneer+oude+dragers+verouderd+raken.+Het+doel+is+ervoor+te+zorgen+dat+dossiers+en+andere+vormen+van+informatie+leesbaar%2C+betrouwbaar+en+integer+blijven+en+zo+lang+toegankelijk+zijn+als+nodig%2C+met+inachtneming+van+bepalingen+over+beveiliging+en+privacy.")});
+															dataProperties.push({conceptid:"id-ef30b103d16c4dff81ff894aba7d3429", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-19c739816a5f4a5ba6f52eb6c37e5bb6", contentid:"id-beee68aee573451193b3e234d26ee3c8", contenttype:"Principle"});
+												dataElements.push({id:"id-beee68aee573451193b3e234d26ee3c8", type:"Principle", specialization:decodeURL(""), name:decodeURL("P12+-+Beoordeling+van+doeltreffendheid+en+effici%C3%ABntie"), documentation:decodeURL("Er+zijn+veel+manieren+om+de+waarde+van+interoperabele+Europese+publieke+diensten+in+kaart+te+brengen%2C+waaronder+overwegingen+zoals+rendement+op+investering%2C+totale+eigendomskosten%2C+het+niveau+van+flexibiliteit+en+aanpasbaarheid%2C+verminderde+administratieve+lasten%2C+effici%C3%ABntie%2C+verminderd+risico%2C+transparantie%2C+vereenvoudiging%2C+verbeterde+werkmethoden+en+het+niveau+van+gebruikerstevredenheid.")});
+															dataProperties.push({conceptid:"id-beee68aee573451193b3e234d26ee3c8", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+
+
+
+
+
+								dataFoldersContent.push({folderid:"id-78066e2c3588419f80593319b752464d", contentid:"id-79313811a52f45c38d996054c27178dd", contenttype:"Folder"});
+								dataFolders.push({id:"id-79313811a52f45c38d996054c27178dd", type:"Folder", name:decodeURL("Implementation+%26+Migration"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-78066e2c3588419f80593319b752464d", contentid:"id-ab7ac4e7713f4d9da7bf0a8658231ab6", contenttype:"Folder"});
+								dataFolders.push({id:"id-ab7ac4e7713f4d9da7bf0a8658231ab6", type:"Folder", name:decodeURL("Other"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-ab7ac4e7713f4d9da7bf0a8658231ab6", contentid:"id-ca1463d887154d0b96f71d26d78b308e", contenttype:"Folder"});
+									dataFolders.push({id:"id-ca1463d887154d0b96f71d26d78b308e", type:"Folder", name:decodeURL("European+Interoperability+Framework+%28EIF%29"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-ca1463d887154d0b96f71d26d78b308e", contentid:"id-e490d77878ee415e98da66862129f74d", contenttype:"Folder"});
+										dataFolders.push({id:"id-e490d77878ee415e98da66862129f74d", type:"Folder", name:decodeURL("03.+Categorie%C3%ABn"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-e490d77878ee415e98da66862129f74d", contentid:"id-1e0ea31b9fb9469285966d6307094ce0", contenttype:"Grouping"});
+												dataElements.push({id:"id-1e0ea31b9fb9469285966d6307094ce0", type:"Grouping", specialization:decodeURL("Categorie"), name:decodeURL("Context"), documentation:decodeURL("Principe+dat+de+context+bepaalt+voor+EU%E2%80%91acties+op+het+gebied+van+interoperabiliteit")});
+															dataProperties.push({conceptid:"id-1e0ea31b9fb9469285966d6307094ce0", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+															dataProperties.push({conceptid:"id-1e0ea31b9fb9469285966d6307094ce0", propkey:decodeURL(""), propvalue:decodeURL("")});
+
+											dataFoldersContent.push({folderid:"id-e490d77878ee415e98da66862129f74d", contentid:"id-0a9633cff56f47729322e66840d7b698", contenttype:"Grouping"});
+												dataElements.push({id:"id-0a9633cff56f47729322e66840d7b698", type:"Grouping", specialization:decodeURL("Categorie"), name:decodeURL("Gebruikersbehoeften"), documentation:decodeURL("Principes+die+verband+houden+met+algemene+gebruikersbehoeften+en+-verwachtingen")});
+															dataProperties.push({conceptid:"id-0a9633cff56f47729322e66840d7b698", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-e490d77878ee415e98da66862129f74d", contentid:"id-77daf7fe9cee4bac88c2e82adf598bea", contenttype:"Grouping"});
+												dataElements.push({id:"id-77daf7fe9cee4bac88c2e82adf598bea", type:"Grouping", specialization:decodeURL("Categorie"), name:decodeURL("Kernprincipes"), documentation:decodeURL("Kernprincipes+van+interoperabiliteit")});
+															dataProperties.push({conceptid:"id-77daf7fe9cee4bac88c2e82adf598bea", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-e490d77878ee415e98da66862129f74d", contentid:"id-b59636b1878b4932978fb1c3950e5e89", contenttype:"Grouping"});
+												dataElements.push({id:"id-b59636b1878b4932978fb1c3950e5e89", type:"Grouping", specialization:decodeURL("Categorie"), name:decodeURL("Samenwerking"), documentation:decodeURL("Fundamentele+principes+voor+samenwerking+tussen+overheidsorganisaties")});
+															dataProperties.push({conceptid:"id-b59636b1878b4932978fb1c3950e5e89", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+
+										dataFoldersContent.push({folderid:"id-ca1463d887154d0b96f71d26d78b308e", contentid:"id-bcb662ae0284406fbba33c30f09b9343", contenttype:"Folder"});
+										dataFolders.push({id:"id-bcb662ae0284406fbba33c30f09b9343", type:"Folder", name:decodeURL("02.+Deel-onderwerpen"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-bcb662ae0284406fbba33c30f09b9343", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+												dataElements.push({id:"id-47808e50af0044bdac741fea9565fd46", type:"Grouping", specialization:decodeURL("Deel-onderwerp"), name:decodeURL("IEF+Principes+voor+publieke+dienstverlening"), documentation:decodeURL("De+interoperabiliteitsprincipes+zijn+fundamentele+gedragsaspecten+die+interoperabiliteitsacties+sturen+en+relevant+zijn+voor+het+opzetten+van+interoperabele+Europese+publieke+diensten.+Ze+beschrijven+de+context+waarin+Europese+publieke+diensten+worden+ontworpen+en+ge%C3%AFmplementeerd.+De+twaalf+onderliggende+principes+van+het+EIF+zijn+gegroepeerd+in+vier+categorie%C3%ABn.")});
+															dataProperties.push({conceptid:"id-47808e50af0044bdac741fea9565fd46", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+											dataFoldersContent.push({folderid:"id-bcb662ae0284406fbba33c30f09b9343", contentid:"id-47d4d012b479447b8c00f1a8370458d3", contenttype:"Grouping"});
+												dataElements.push({id:"id-47d4d012b479447b8c00f1a8370458d3", type:"Grouping", specialization:decodeURL("Deel-onderwerp"), name:decodeURL("Interoperabiliteits-lagen"), documentation:decodeURL("")});
+															dataProperties.push({conceptid:"id-47d4d012b479447b8c00f1a8370458d3", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fnifo-national-interoperability-framework-observatory%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Flevels-interoperability")});
+
+											dataFoldersContent.push({folderid:"id-bcb662ae0284406fbba33c30f09b9343", contentid:"id-4bb5fad5b83247878a251b17161fd4aa", contenttype:"Grouping"});
+												dataElements.push({id:"id-4bb5fad5b83247878a251b17161fd4aa", type:"Grouping", specialization:decodeURL("Deel-onderwerp"), name:decodeURL("Juridische+interoperabiliteit"), documentation:decodeURL("Juridische+interoperabiliteit+gaat+erover+dat+organisaties%2C+die+werken+onder+verschillende+juridische+kaders%2C+beleidslijnen+en+strategie%C3%ABn%2C+toch+met+elkaar+kunnen+samenwerken.")});
+															dataProperties.push({conceptid:"id-4bb5fad5b83247878a251b17161fd4aa", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fnifo-national-interoperability-framework-observatory%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Flevels-interoperability")});
+
+											dataFoldersContent.push({folderid:"id-bcb662ae0284406fbba33c30f09b9343", contentid:"id-e44fae1c8964458289070fc0fd6bb6d2", contenttype:"Grouping"});
+												dataElements.push({id:"id-e44fae1c8964458289070fc0fd6bb6d2", type:"Grouping", specialization:decodeURL("Deel-onderwerp"), name:decodeURL("Organisatorische+interoperabiliteit"), documentation:decodeURL("Organisatorische+interoperabiliteit+verwijst+naar+de+manier+waarop+overheidsorganisaties+hun+werkprocessen%2C+verantwoordelijkheden+en+verwachtingen+op+elkaar+afstemmen%2C+zodat+zij+gezamenlijk+overeengekomen+en+wederzijds+voordelige+doelen+kunnen+bereiken.")});
+															dataProperties.push({conceptid:"id-e44fae1c8964458289070fc0fd6bb6d2", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fnifo-national-interoperability-framework-observatory%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Flevels-interoperability")});
+
+											dataFoldersContent.push({folderid:"id-bcb662ae0284406fbba33c30f09b9343", contentid:"id-8ac2b876113447b098c172ebe2446d17", contenttype:"Grouping"});
+												dataElements.push({id:"id-8ac2b876113447b098c172ebe2446d17", type:"Grouping", specialization:decodeURL("Deel-onderwerp"), name:decodeURL("Organiseren+van+interoperabiliteit"), documentation:decodeURL("Het+organiseren+van+interoperabiliteit+verwijst+naar+de+wijze+waarop+afspraken%2C+rollen%2C+verantwoordelijkheden%2C+beleidskaders+en+structuren+worden+ingericht+en+beheerd+om+samenwerking+en+gegevensuitwisseling+betrouwbaar+en+consistent+te+laten+verlopen.")});
+															dataProperties.push({conceptid:"id-8ac2b876113447b098c172ebe2446d17", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("Technische+interoperabiliteit+heeft+betrekking+op+de+toepassingen+en+infrastructuren+die+systemen+en+diensten+met+elkaar+verbinden.+Onder+onderdelen+van+technische+interoperabiliteit+vallen+onder+andere+specificaties+van+koppelvlakken%2C+diensten+voor+onderlinge+verbinding%2C+gegevensintegratiediensten%2C+manieren+om+gegevens+te+presenteren+en+uit+te+wisselen%2C+en+beveiligde+communicatieprotocollen.")});
+
+											dataFoldersContent.push({folderid:"id-bcb662ae0284406fbba33c30f09b9343", contentid:"id-9e7c520c66b34b7189c47d3ca64ee1f4", contenttype:"Grouping"});
+												dataElements.push({id:"id-9e7c520c66b34b7189c47d3ca64ee1f4", type:"Grouping", specialization:decodeURL("Deel-onderwerp"), name:decodeURL("Semantische+interoperabiliteit"), documentation:decodeURL("Semantische+interoperabiliteit+zorgt+ervoor+dat+de+exacte+structuur+en+betekenis+van+uitgewisselde+gegevens+en+informatie+behouden+blijven+en+door+alle+betrokken+partijen+op+dezelfde+manier+worden+begrepen.+Met+andere+woorden%3A+%E2%80%98wat+wordt+verzonden%2C+is+ook+wat+wordt+begrepen%E2%80%99.")});
+															dataProperties.push({conceptid:"id-9e7c520c66b34b7189c47d3ca64ee1f4", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fnifo-national-interoperability-framework-observatory%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Flevels-interoperability")});
+
+											dataFoldersContent.push({folderid:"id-bcb662ae0284406fbba33c30f09b9343", contentid:"id-322da1fb01204b4197890847324a32de", contenttype:"Grouping"});
+												dataElements.push({id:"id-322da1fb01204b4197890847324a32de", type:"Grouping", specialization:decodeURL("Deel-onderwerp"), name:decodeURL("Technische+interoperabiliteit"), documentation:decodeURL("Technische+interoperabiliteit+heeft+betrekking+op+de+toepassingen+en+infrastructuren+die+systemen+en+diensten+met+elkaar+verbinden.+Onder+onderdelen+van+technische+interoperabiliteit+vallen+onder+andere+specificaties+van+koppelvlakken%2C+diensten+voor+onderlinge+verbinding%2C+gegevensintegratiediensten%2C+manieren+om+gegevens+te+presenteren+en+uit+te+wisselen%2C+en+beveiligde+communicatieprotocollen.")});
+															dataProperties.push({conceptid:"id-322da1fb01204b4197890847324a32de", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fnifo-national-interoperability-framework-observatory%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Flevels-interoperability")});
+
+
+										dataFoldersContent.push({folderid:"id-ca1463d887154d0b96f71d26d78b308e", contentid:"id-4020c31c30f946e9a8a455505deb1da7", contenttype:"Folder"});
+										dataFolders.push({id:"id-4020c31c30f946e9a8a455505deb1da7", type:"Folder", name:decodeURL("01.+Onderwerpen"), documentation:decodeURL("")});
+											dataFoldersContent.push({folderid:"id-4020c31c30f946e9a8a455505deb1da7", contentid:"id-ad9805554bf149568f34b2718987de0e", contenttype:"Grouping"});
+												dataElements.push({id:"id-ad9805554bf149568f34b2718987de0e", type:"Grouping", specialization:decodeURL("Onderwerp"), name:decodeURL("European+Interoperability+Framework+%28EIF%29"), documentation:decodeURL("Het+is+een+framework+dat+de+Europese+Commissie+in+2017+heeft+opgezet+en+dat+specifieke+richtsnoeren+geeft+voor+het+opzetten+van+interoperabele+digitale+overheidsdiensten.%0D%0A%0D%0AAangezien+alle+EU-landen+momenteel+hun+overheidsdiensten+digitaliseren%2C+biedt+het+EIF+47+aanbevelingen+over+hoe+ze+de+governance+van+hun+interoperabiliteitsactiviteitenkunnen+verbeteren%2C+cross-organisatorische+relaties+tot+stand+kunnen+brengen%2C+processen+ter+ondersteuning+van+end-to-end+digitale+diensten+kunnen+stroomlijnen+en+ervoor+kunnen+zorgen+dat+zowel+bestaande+als+nieuwe+wetgeving+dei+nteroperabiliteitsinspanningen+niet+in+het+gedrang+brengt.+Dit+zal+ervoor+zorgen+dat+diensten+toegankelijk+zijn%2C+niet+alleen+binnen+hun+nationale+grenzen%2C+maar+ook+over+landen+en+beleidsterreinen+heen.+Met+andere+woorden%2C+ze+zullen+interoperabiliteit+in+de+praktijk+toepassen.+Op+die+manier+kunnen+overheidsdiensten+tijd+besparen%2C+kosten+besparen%2C+de+transparantie+verhogen++en+de+kwaliteit+van+de+diensten+die+ze+aan+burgers+en+bedrijven+aanbieden%2C+verbeteren.")});
+															dataProperties.push({conceptid:"id-ad9805554bf149568f34b2718987de0e", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fnifo-national-interoperability-framework-observatory%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox")});
+
+
+
+
+
+
+								dataFoldersContent.push({folderid:"id-78066e2c3588419f80593319b752464d", contentid:"id-47a876f5a99c4ac09fa4a95316c34e78", contenttype:"Folder"});
+								dataFolders.push({id:"id-47a876f5a99c4ac09fa4a95316c34e78", type:"Folder", name:decodeURL("Relations"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-47a876f5a99c4ac09fa4a95316c34e78", contentid:"id-66fee454cb914067857d857379b96fb4", contenttype:"Folder"});
+									dataFolders.push({id:"id-66fee454cb914067857d857379b96fb4", type:"Folder", name:decodeURL("European+Interoperability+Framework+%28EIF%29"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-e836a82bd3544c4bb722842642489ca7", contenttype:"CompositionRelationship"});
+											dataRelationships.push({id:"id-e836a82bd3544c4bb722842642489ca7", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL("bestaat+uit"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-1e0ea31b9fb9469285966d6307094ce0"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-28e994ca1d1348b7ba9f96a7e9dc2fac", contenttype:"CompositionRelationship"});
+											dataRelationships.push({id:"id-28e994ca1d1348b7ba9f96a7e9dc2fac", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL("bestaat+uit"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-77daf7fe9cee4bac88c2e82adf598bea"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-58816be6caff42438f416bed3b0f9123", contenttype:"CompositionRelationship"});
+											dataRelationships.push({id:"id-58816be6caff42438f416bed3b0f9123", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL("bestaat+uit"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-0a9633cff56f47729322e66840d7b698"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-ead83d83bfba4697b43fcd166933c302", contenttype:"CompositionRelationship"});
+											dataRelationships.push({id:"id-ead83d83bfba4697b43fcd166933c302", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL("bestaat+uit"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-b59636b1878b4932978fb1c3950e5e89"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-4362a1d74d024a3fa9e8b8300f2980b0", contenttype:"CompositionRelationship"});
+											dataRelationships.push({id:"id-4362a1d74d024a3fa9e8b8300f2980b0", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL("bevat"), documentation:decodeURL(""), sourceid:"id-47d4d012b479447b8c00f1a8370458d3", targetid:"id-322da1fb01204b4197890847324a32de"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-ef1d6c4383844d09b3f7ec6ddbc88e8b", contenttype:"CompositionRelationship"});
+											dataRelationships.push({id:"id-ef1d6c4383844d09b3f7ec6ddbc88e8b", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL("bevat"), documentation:decodeURL(""), sourceid:"id-47d4d012b479447b8c00f1a8370458d3", targetid:"id-e44fae1c8964458289070fc0fd6bb6d2"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-6837e826e34548178cf2652db063b20f", contenttype:"CompositionRelationship"});
+											dataRelationships.push({id:"id-6837e826e34548178cf2652db063b20f", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL("bevat"), documentation:decodeURL(""), sourceid:"id-47d4d012b479447b8c00f1a8370458d3", targetid:"id-4bb5fad5b83247878a251b17161fd4aa"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-0c9be51b029c4930a764a048dfac09dd", contenttype:"CompositionRelationship"});
+											dataRelationships.push({id:"id-0c9be51b029c4930a764a048dfac09dd", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL("bevat"), documentation:decodeURL(""), sourceid:"id-47d4d012b479447b8c00f1a8370458d3", targetid:"id-8ac2b876113447b098c172ebe2446d17"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-a37a8d18937948bcb6e3fe206ff6e78f", contenttype:"CompositionRelationship"});
+											dataRelationships.push({id:"id-a37a8d18937948bcb6e3fe206ff6e78f", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL("bevat"), documentation:decodeURL(""), sourceid:"id-47d4d012b479447b8c00f1a8370458d3", targetid:"id-9e7c520c66b34b7189c47d3ca64ee1f4"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-5938c3f40adc4d6eb1b7430b7468bfa4", contenttype:"CompositionRelationship"});
+											dataRelationships.push({id:"id-5938c3f40adc4d6eb1b7430b7468bfa4", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL("bevat"), documentation:decodeURL(""), sourceid:"id-ad9805554bf149568f34b2718987de0e", targetid:"id-47d4d012b479447b8c00f1a8370458d3"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-d0121e9b8f994a68ac2632fbc106df66", contenttype:"CompositionRelationship"});
+											dataRelationships.push({id:"id-d0121e9b8f994a68ac2632fbc106df66", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL("bevat"), documentation:decodeURL(""), sourceid:"id-ad9805554bf149568f34b2718987de0e", targetid:"id-47808e50af0044bdac741fea9565fd46"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-b9bdfdb341fd4e3f89e4792b69edbb94", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-b9bdfdb341fd4e3f89e4792b69edbb94", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("categorieseert"), documentation:decodeURL(""), sourceid:"id-b59636b1878b4932978fb1c3950e5e89", targetid:"id-ef30b103d16c4dff81ff894aba7d3429"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-3e57545811c147d0b0b2d739f4ef637d", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-3e57545811c147d0b0b2d739f4ef637d", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("categoriseert"), documentation:decodeURL(""), sourceid:"id-1e0ea31b9fb9469285966d6307094ce0", targetid:"id-eb5bc19200d54e1f8c29940c45861dc5"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-eb7d51ef6b3e482392f977b3894e5959", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-eb7d51ef6b3e482392f977b3894e5959", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("categoriseert"), documentation:decodeURL(""), sourceid:"id-77daf7fe9cee4bac88c2e82adf598bea", targetid:"id-84c74c33b2ea4581a10ed7552f0996cd"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-56a598340e884905a25dfe0349a1b421", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-56a598340e884905a25dfe0349a1b421", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("categoriseert"), documentation:decodeURL(""), sourceid:"id-77daf7fe9cee4bac88c2e82adf598bea", targetid:"id-03e6efdb790b427593fcb30bfdf58fae"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-32713266515845d9b0b0511205c0113b", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-32713266515845d9b0b0511205c0113b", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("categoriseert"), documentation:decodeURL(""), sourceid:"id-77daf7fe9cee4bac88c2e82adf598bea", targetid:"id-ca337e28c66845b3bdbda93d43284aab"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-96126e7241cf46efaf68ac633e713bee", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-96126e7241cf46efaf68ac633e713bee", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("categoriseert"), documentation:decodeURL(""), sourceid:"id-77daf7fe9cee4bac88c2e82adf598bea", targetid:"id-12c87975916c4ebf881611e420e4a0ee"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-cb6b3f5bfedc4ebfa19ea5f1a16617eb", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-cb6b3f5bfedc4ebfa19ea5f1a16617eb", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("categoriseert"), documentation:decodeURL(""), sourceid:"id-0a9633cff56f47729322e66840d7b698", targetid:"id-1f9f9c13d08e4f9a8edbd2ee0db5185e"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-ba7e34163eb34515940ae0a1e5b7b7c4", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-ba7e34163eb34515940ae0a1e5b7b7c4", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("categoriseert"), documentation:decodeURL(""), sourceid:"id-0a9633cff56f47729322e66840d7b698", targetid:"id-fbb0b6a834864558b9d4929745114f58"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-898afd84c7e64922993b515df6b4fc56", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-898afd84c7e64922993b515df6b4fc56", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("categoriseert"), documentation:decodeURL(""), sourceid:"id-0a9633cff56f47729322e66840d7b698", targetid:"id-d0b5457477184ca6ab336f02f8c84d9d"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-a01d5780ff3c4621bc5d01333eae9f6b", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-a01d5780ff3c4621bc5d01333eae9f6b", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("categoriseert"), documentation:decodeURL(""), sourceid:"id-0a9633cff56f47729322e66840d7b698", targetid:"id-80a9f879e53743fdb349f27c3e5da161"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-6f18ba1c1f014c2aac1dff1f4781bc6f", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-6f18ba1c1f014c2aac1dff1f4781bc6f", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("categoriseert"), documentation:decodeURL(""), sourceid:"id-b59636b1878b4932978fb1c3950e5e89", targetid:"id-367d7753beef4f0f887aeb48709bf2d1"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-56d73a1d59ee4502b33ee6da6959a93a", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-56d73a1d59ee4502b33ee6da6959a93a", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("categoriseert"), documentation:decodeURL(""), sourceid:"id-b59636b1878b4932978fb1c3950e5e89", targetid:"id-beee68aee573451193b3e234d26ee3c8"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-9bed07c59eb64b1aa8d00cbb467c8cdd", contenttype:"CompositionRelationship"});
+											dataRelationships.push({id:"id-9bed07c59eb64b1aa8d00cbb467c8cdd", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-ad9805554bf149568f34b2718987de0e", targetid:"id-47808e50af0044bdac741fea9565fd46"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-6e0a203713484c9baca44fbfe97fe89b", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-6e0a203713484c9baca44fbfe97fe89b", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("groepeert"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-eb5bc19200d54e1f8c29940c45861dc5"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-9b942642124a4f1495c850c204e026e8", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-9b942642124a4f1495c850c204e026e8", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("groepeert"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-84c74c33b2ea4581a10ed7552f0996cd"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-783115c040e54201b99aa4b84d1b01b9", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-783115c040e54201b99aa4b84d1b01b9", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("groepeert"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-03e6efdb790b427593fcb30bfdf58fae"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-9cd1e5ab40374b0ea9f6233e91ed6726", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-9cd1e5ab40374b0ea9f6233e91ed6726", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("groepeert"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-12c87975916c4ebf881611e420e4a0ee"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-932f6f085eee4df595156fe63454dcfb", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-932f6f085eee4df595156fe63454dcfb", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("groepeert"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-ca337e28c66845b3bdbda93d43284aab"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-994265192bde4fe496502d412319c73a", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-994265192bde4fe496502d412319c73a", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("groepeert"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-1f9f9c13d08e4f9a8edbd2ee0db5185e"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-204c884d8eb948a98891df8069472319", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-204c884d8eb948a98891df8069472319", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("groepeert"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-fbb0b6a834864558b9d4929745114f58"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-fac8b7a3fd4f46ab8a6473e352b60eae", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-fac8b7a3fd4f46ab8a6473e352b60eae", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("groepeert"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-d0b5457477184ca6ab336f02f8c84d9d"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-969d2a57c7db45f3a78541c0d3e6c1f6", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-969d2a57c7db45f3a78541c0d3e6c1f6", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("groepeert"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-80a9f879e53743fdb349f27c3e5da161"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-b0be42e958554b7b9fdc5de9c0d52b18", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-b0be42e958554b7b9fdc5de9c0d52b18", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("groepeert"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-ef30b103d16c4dff81ff894aba7d3429"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-a617aba3322142c8b674b4ca0f5b76c3", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-a617aba3322142c8b674b4ca0f5b76c3", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("groepeert"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-367d7753beef4f0f887aeb48709bf2d1"});
+										dataFoldersContent.push({folderid:"id-66fee454cb914067857d857379b96fb4", contentid:"id-b1860d6fb0384533bf14d7c0c58e7f37", contenttype:"AggregationRelationship"});
+											dataRelationships.push({id:"id-b1860d6fb0384533bf14d7c0c58e7f37", type:"AggregationRelationship", specialization:decodeURL(""), name:decodeURL("groepeert"), documentation:decodeURL(""), sourceid:"id-47808e50af0044bdac741fea9565fd46", targetid:"id-beee68aee573451193b3e234d26ee3c8"});
+
+
+
+								dataFoldersContent.push({folderid:"id-78066e2c3588419f80593319b752464d", contentid:"id-90d5837ae8ce4f7a84b0fbc332d964cf", contenttype:"Folder"});
+								dataFolders.push({id:"id-90d5837ae8ce4f7a84b0fbc332d964cf", type:"Folder", name:decodeURL("Views"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-90d5837ae8ce4f7a84b0fbc332d964cf", contentid:"id-ce8f5906a57f449a9ace776cfd42c49b", contenttype:"Folder"});
+									dataFolders.push({id:"id-ce8f5906a57f449a9ace776cfd42c49b", type:"Folder", name:decodeURL("European+Interoperability+Framework+%28EIF%29"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-8068e21be3d64160b66228ae8cf141c4", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-8068e21be3d64160b66228ae8cf141c4", type:"ArchimateDiagramModel", name:decodeURL("01.+European+Interoperability+Framework+%28EIF%29"), documentation:decodeURL("Het+is+een+framework+dat+de+Europese+Commissie+in+2017+heeft+opgezet+en+dat+specifieke+richtsnoeren+geeft+voor+het+opzetten+van+interoperabele+digitale+overheidsdiensten.%0D%0A%0D%0AAangezien+alle+EU-landen+momenteel+hun+overheidsdiensten+digitaliseren%2C+biedt+het+EIF+47+aanbevelingen+over+hoe+ze+de+governance+van+hun+interoperabiliteitsactiviteitenkunnen+verbeteren%2C+cross-organisatorische+relaties+tot+stand+kunnen+brengen%2C+processen+ter+ondersteuning+van+end-to-end+digitale+diensten+kunnen+stroomlijnen+en+ervoor+kunnen+zorgen+dat+zowel+bestaande+als+nieuwe+wetgeving+dei+nteroperabiliteitsinspanningen+niet+in+het+gedrang+brengt.+Dit+zal+ervoor+zorgen+dat+diensten+toegankelijk+zijn%2C+niet+alleen+binnen+hun+nationale+grenzen%2C+maar+ook+over+landen+en+beleidsterreinen+heen.+Met+andere+woorden%2C+ze+zullen+interoperabiliteit+in+de+praktijk+toepassen.+Op+die+manier+kunnen+overheidsdiensten+tijd+besparen%2C+kosten+besparen%2C+de+transparantie+verhogen++en+de+kwaliteit+van+de+diensten+die+ze+aan+burgers+en+bedrijven+aanbieden%2C+verbeteren.")});
+														dataProperties.push({conceptid:"id-8068e21be3d64160b66228ae8cf141c4", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fnifo-national-interoperability-framework-observatory%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox")});
+
+													dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-ad9805554bf149568f34b2718987de0e", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-47d4d012b479447b8c00f1a8370458d3", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-4bb5fad5b83247878a251b17161fd4aa", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-e44fae1c8964458289070fc0fd6bb6d2", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-9e7c520c66b34b7189c47d3ca64ee1f4", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-322da1fb01204b4197890847324a32de", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-8ac2b876113447b098c172ebe2446d17", contenttype:"Grouping"});
+															
+															dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-beee68aee573451193b3e234d26ee3c8", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-ef30b103d16c4dff81ff894aba7d3429", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-367d7753beef4f0f887aeb48709bf2d1", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-fbb0b6a834864558b9d4929745114f58", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-d0b5457477184ca6ab336f02f8c84d9d", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-80a9f879e53743fdb349f27c3e5da161", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-1f9f9c13d08e4f9a8edbd2ee0db5185e", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-12c87975916c4ebf881611e420e4a0ee", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-ca337e28c66845b3bdbda93d43284aab", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-eb5bc19200d54e1f8c29940c45861dc5", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-84c74c33b2ea4581a10ed7552f0996cd", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-03e6efdb790b427593fcb30bfdf58fae", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-5938c3f40adc4d6eb1b7430b7468bfa4", contenttype:"CompositionRelationship"});
+																			dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-d0121e9b8f994a68ac2632fbc106df66", contenttype:"CompositionRelationship"});
+																			dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-9bed07c59eb64b1aa8d00cbb467c8cdd", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-a37a8d18937948bcb6e3fe206ff6e78f", contenttype:"CompositionRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-ef1d6c4383844d09b3f7ec6ddbc88e8b", contenttype:"CompositionRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-4362a1d74d024a3fa9e8b8300f2980b0", contenttype:"CompositionRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-0c9be51b029c4930a764a048dfac09dd", contenttype:"CompositionRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-6837e826e34548178cf2652db063b20f", contenttype:"CompositionRelationship"});
+
+															
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-6e0a203713484c9baca44fbfe97fe89b", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-9b942642124a4f1495c850c204e026e8", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-783115c040e54201b99aa4b84d1b01b9", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-9cd1e5ab40374b0ea9f6233e91ed6726", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-932f6f085eee4df595156fe63454dcfb", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-994265192bde4fe496502d412319c73a", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-204c884d8eb948a98891df8069472319", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-fac8b7a3fd4f46ab8a6473e352b60eae", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-969d2a57c7db45f3a78541c0d3e6c1f6", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-b0be42e958554b7b9fdc5de9c0d52b18", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-a617aba3322142c8b674b4ca0f5b76c3", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-8068e21be3d64160b66228ae8cf141c4", contentid:"id-b1860d6fb0384533bf14d7c0c58e7f37", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-5cc83e5135a241a8b89a05e6d7aa090f", type:"ArchimateDiagramModel", name:decodeURL("02.+IEF+Principes+voor+publieke+dienstverlening"), documentation:decodeURL("De+interoperabiliteitsprincipes+zijn+fundamentele+gedragsaspecten+die+interoperabiliteitsacties+sturen+en+relevant+zijn+voor+het+opzetten+van+interoperabele+Europese+publieke+diensten.+Ze+beschrijven+de+context+waarin+Europese+publieke+diensten+worden+ontworpen+en+ge%C3%AFmplementeerd.+De+twaalf+onderliggende+principes+van+het+EIF+zijn+gegroepeerd+in+vier+categorie%C3%ABn.")});
+														dataProperties.push({conceptid:"id-5cc83e5135a241a8b89a05e6d7aa090f", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-b59636b1878b4932978fb1c3950e5e89", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-367d7753beef4f0f887aeb48709bf2d1", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-ef30b103d16c4dff81ff894aba7d3429", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-beee68aee573451193b3e234d26ee3c8", contenttype:"Principle"});
+															
+															dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-0a9633cff56f47729322e66840d7b698", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-1f9f9c13d08e4f9a8edbd2ee0db5185e", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-fbb0b6a834864558b9d4929745114f58", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-d0b5457477184ca6ab336f02f8c84d9d", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-80a9f879e53743fdb349f27c3e5da161", contenttype:"Principle"});
+															
+															dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-77daf7fe9cee4bac88c2e82adf598bea", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-84c74c33b2ea4581a10ed7552f0996cd", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-03e6efdb790b427593fcb30bfdf58fae", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-ca337e28c66845b3bdbda93d43284aab", contenttype:"Principle"});
+																	dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-12c87975916c4ebf881611e420e4a0ee", contenttype:"Principle"});
+															
+															dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-1e0ea31b9fb9469285966d6307094ce0", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-eb5bc19200d54e1f8c29940c45861dc5", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-e836a82bd3544c4bb722842642489ca7", contenttype:"CompositionRelationship"});
+																			dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-28e994ca1d1348b7ba9f96a7e9dc2fac", contenttype:"CompositionRelationship"});
+																			dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-58816be6caff42438f416bed3b0f9123", contenttype:"CompositionRelationship"});
+																			dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-ead83d83bfba4697b43fcd166933c302", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-6f18ba1c1f014c2aac1dff1f4781bc6f", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-b9bdfdb341fd4e3f89e4792b69edbb94", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-56d73a1d59ee4502b33ee6da6959a93a", contenttype:"AggregationRelationship"});
+
+															
+																					dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-cb6b3f5bfedc4ebfa19ea5f1a16617eb", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-ba7e34163eb34515940ae0a1e5b7b7c4", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-898afd84c7e64922993b515df6b4fc56", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-a01d5780ff3c4621bc5d01333eae9f6b", contenttype:"AggregationRelationship"});
+
+															
+																					dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-eb7d51ef6b3e482392f977b3894e5959", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-56a598340e884905a25dfe0349a1b421", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-32713266515845d9b0b0511205c0113b", contenttype:"AggregationRelationship"});
+																					dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-96126e7241cf46efaf68ac633e713bee", contenttype:"AggregationRelationship"});
+
+															
+																					dataViewsContent.push({viewid:"id-5cc83e5135a241a8b89a05e6d7aa090f", contentid:"id-3e57545811c147d0b0b2d739f4ef637d", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-e3df6aca600a41bb96f3279f6a5d9cad", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-e3df6aca600a41bb96f3279f6a5d9cad", type:"ArchimateDiagramModel", name:decodeURL("P01+-+Subsidatiteit+en+proportionaliteit"), documentation:decodeURL("Subsidatiteit+houdt+in+dat+besluiten+binnen+de+EU+zo+dicht+mogelijk+bij+de+burger+worden+genomen.+Met+andere+woorden%3A+de+EU+onderneemt+alleen+actie+als+dit+effectiever+is+dan+wanneer+dezelfde+actie+op+nationaal+niveau+zou+worden+uitgevoerd.+Het+proportionaliteitsprincipe+bepaalt+bovendien+dat+EU%E2%80%91maatregelen+niet+verder+mogen+gaan+dan+nodig+is+om+de+doelstellingen+van+de+verdragen+te+bereiken.%0D%0A%0D%0ASubsidatiteit+-+Doe+iets+pas+op+EU+niveau+als+het+niet+goed+genoeg+lukt+op+nationaal+niveau.%0D%0AProportionaliteit+-+Gebruik+niet+meer+maatregelen+dan+nodig+zijn+om+je+doel+te+bereiken.")});
+														dataProperties.push({conceptid:"id-e3df6aca600a41bb96f3279f6a5d9cad", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-e3df6aca600a41bb96f3279f6a5d9cad", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-e3df6aca600a41bb96f3279f6a5d9cad", contentid:"id-1e0ea31b9fb9469285966d6307094ce0", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-e3df6aca600a41bb96f3279f6a5d9cad", contentid:"id-eb5bc19200d54e1f8c29940c45861dc5", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-e3df6aca600a41bb96f3279f6a5d9cad", contentid:"id-e836a82bd3544c4bb722842642489ca7", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-e3df6aca600a41bb96f3279f6a5d9cad", contentid:"id-3e57545811c147d0b0b2d739f4ef637d", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-291b8cdc1f1a4eaea401b17206d198ec", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-291b8cdc1f1a4eaea401b17206d198ec", type:"ArchimateDiagramModel", name:decodeURL("P02+-+Openheid"), documentation:decodeURL("Openheid+heeft+vooral+betrekking+op+gegevens%2C+specificaties+en+software.+Open+overheidsdata+%28hier+eenvoudigweg+%E2%80%98open+data%E2%80%99+genoemd%29+verwijst+naar+het+idee+dat+alle+publieke+gegevens+vrij+beschikbaar+zouden+moeten+zijn+voor+gebruik+en+hergebruik+door+anderen%2C+tenzij+er+beperkingen+gelden%2C+bijvoorbeeld+ter+bescherming+van+persoonsgegevens%2C+vertrouwelijkheid+of+intellectuele%E2%80%91eigendomsrechten.")});
+														dataProperties.push({conceptid:"id-291b8cdc1f1a4eaea401b17206d198ec", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-291b8cdc1f1a4eaea401b17206d198ec", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-291b8cdc1f1a4eaea401b17206d198ec", contentid:"id-77daf7fe9cee4bac88c2e82adf598bea", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-291b8cdc1f1a4eaea401b17206d198ec", contentid:"id-84c74c33b2ea4581a10ed7552f0996cd", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-291b8cdc1f1a4eaea401b17206d198ec", contentid:"id-28e994ca1d1348b7ba9f96a7e9dc2fac", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-291b8cdc1f1a4eaea401b17206d198ec", contentid:"id-eb7d51ef6b3e482392f977b3894e5959", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-8d6b0e87453c469a9ee3c14c07ee00aa", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-8d6b0e87453c469a9ee3c14c07ee00aa", type:"ArchimateDiagramModel", name:decodeURL("P03+-+Zichtbaarheid"), documentation:decodeURL("Zichtbaarheid+gaat+over+het+mogelijk+maken+dat+anderen+binnen+%C3%A9n+buiten+de+overheid+inzicht+krijgen+in+wat+er+in+een+overheidsorganisatie+gebeurt.+Dit+houdt+in+dat+andere+overheden%2C+inwoners+en+bedrijven+de+regels%2C+processen%2C+gegevens%2C+diensten+en+besluitvorming+kunnen+bekijken+en+begrijpen.")});
+														dataProperties.push({conceptid:"id-8d6b0e87453c469a9ee3c14c07ee00aa", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-8d6b0e87453c469a9ee3c14c07ee00aa", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-8d6b0e87453c469a9ee3c14c07ee00aa", contentid:"id-77daf7fe9cee4bac88c2e82adf598bea", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-8d6b0e87453c469a9ee3c14c07ee00aa", contentid:"id-03e6efdb790b427593fcb30bfdf58fae", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-8d6b0e87453c469a9ee3c14c07ee00aa", contentid:"id-28e994ca1d1348b7ba9f96a7e9dc2fac", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-8d6b0e87453c469a9ee3c14c07ee00aa", contentid:"id-56a598340e884905a25dfe0349a1b421", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-3c854e9a53d845c4bdd022cb56df63d3", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-3c854e9a53d845c4bdd022cb56df63d3", type:"ArchimateDiagramModel", name:decodeURL("P04+-+Herbruikbaarheid"), documentation:decodeURL("Interfaces%2C+standaarden%2C+informatie+en+gegevens+vormen+belangrijke+bouwstenen+voor+interoperabiliteit+en+verhogen+de+kwaliteit+van+samenwerking.+Ze+maken+breder+gebruik+mogelijk+van+bestaande+voorzieningen+en+besparen+daarbij+tijd+%C3%A9n+geld.+Hiermee+leveren+zij+een+belangrijke+bijdrage+aan+de+ontwikkeling+van+een+Europese+digitale+interne+markt.")});
+														dataProperties.push({conceptid:"id-3c854e9a53d845c4bdd022cb56df63d3", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-3c854e9a53d845c4bdd022cb56df63d3", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-3c854e9a53d845c4bdd022cb56df63d3", contentid:"id-77daf7fe9cee4bac88c2e82adf598bea", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-3c854e9a53d845c4bdd022cb56df63d3", contentid:"id-ca337e28c66845b3bdbda93d43284aab", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-3c854e9a53d845c4bdd022cb56df63d3", contentid:"id-28e994ca1d1348b7ba9f96a7e9dc2fac", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-3c854e9a53d845c4bdd022cb56df63d3", contentid:"id-32713266515845d9b0b0511205c0113b", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-37255ec9497f410cb882e26c76a7bc1c", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-37255ec9497f410cb882e26c76a7bc1c", type:"ArchimateDiagramModel", name:decodeURL("P05+-+Technologische+neutraliteit+en+gegevensportabiliteit"), documentation:decodeURL("Bij+het+opzetten+van+Europese+publieke+diensten+moeten+overheidsorganisaties+zich+richten+op+functionele+behoeften+en+beslissingen+over+technologie+zo+lang+mogelijk+uitstellen%2C+om+technologische+afhankelijkheden+te+beperken+en+te+voorkomen+dat+specifieke+technische+implementaties+of+producten+aan+betrokken+partijen+worden+opgelegd.")});
+														dataProperties.push({conceptid:"id-37255ec9497f410cb882e26c76a7bc1c", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-37255ec9497f410cb882e26c76a7bc1c", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-37255ec9497f410cb882e26c76a7bc1c", contentid:"id-77daf7fe9cee4bac88c2e82adf598bea", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-37255ec9497f410cb882e26c76a7bc1c", contentid:"id-12c87975916c4ebf881611e420e4a0ee", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-37255ec9497f410cb882e26c76a7bc1c", contentid:"id-28e994ca1d1348b7ba9f96a7e9dc2fac", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-37255ec9497f410cb882e26c76a7bc1c", contentid:"id-96126e7241cf46efaf68ac633e713bee", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-5e49e77c303a43f985b258ad174a0063", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-5e49e77c303a43f985b258ad174a0063", type:"ArchimateDiagramModel", name:decodeURL("P06+-+Gebruikersgerichtheid"), documentation:decodeURL("Bij+het+bepalen+welke+publieke+diensten+moeten+worden+geleverd+en+hoe+deze+moeten+worden+aangeboden%2C+moet+rekening+worden+gehouden+met+de+behoeften+van+gebruikers.")});
+														dataProperties.push({conceptid:"id-5e49e77c303a43f985b258ad174a0063", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-5e49e77c303a43f985b258ad174a0063", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-5e49e77c303a43f985b258ad174a0063", contentid:"id-0a9633cff56f47729322e66840d7b698", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-5e49e77c303a43f985b258ad174a0063", contentid:"id-1f9f9c13d08e4f9a8edbd2ee0db5185e", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-5e49e77c303a43f985b258ad174a0063", contentid:"id-58816be6caff42438f416bed3b0f9123", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-5e49e77c303a43f985b258ad174a0063", contentid:"id-cb6b3f5bfedc4ebfa19ea5f1a16617eb", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-ce02c9e72ff447ec863abebb3edacdd8", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-ce02c9e72ff447ec863abebb3edacdd8", type:"ArchimateDiagramModel", name:decodeURL("P07+-+Inclusie+en+toegankelijkheid"), documentation:decodeURL("Inclusie+gaat+over+het+ervoor+zorgen+dat+iedereen+volledig+kan+profiteren+van+de+mogelijkheden+die+nieuwe+technologie%C3%ABn+bieden+om+toegang+te+krijgen+tot+en+gebruik+te+maken+van+Europese+publieke+diensten%2C+waarbij+sociale+en+economische+verschillen+en+uitsluiting+worden+overwonnen.+Toegankelijkheid+zorgt+ervoor+dat+mensen+met+een+beperking%2C+ouderen+en+andere+kwetsbare+groepen+publieke+diensten+kunnen+gebruiken+op+een+serviceniveau+dat+vergelijkbaar+is+met+dat+van+andere+burgers.")});
+														dataProperties.push({conceptid:"id-ce02c9e72ff447ec863abebb3edacdd8", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-ce02c9e72ff447ec863abebb3edacdd8", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-ce02c9e72ff447ec863abebb3edacdd8", contentid:"id-0a9633cff56f47729322e66840d7b698", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-ce02c9e72ff447ec863abebb3edacdd8", contentid:"id-fbb0b6a834864558b9d4929745114f58", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-ce02c9e72ff447ec863abebb3edacdd8", contentid:"id-58816be6caff42438f416bed3b0f9123", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-ce02c9e72ff447ec863abebb3edacdd8", contentid:"id-ba7e34163eb34515940ae0a1e5b7b7c4", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-c96df263486c42a6b77575e3f3f920b7", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-c96df263486c42a6b77575e3f3f920b7", type:"ArchimateDiagramModel", name:decodeURL("P08+-+Beveiliging+en+privacy"), documentation:decodeURL("Burgers+en+bedrijven+moeten+erop+kunnen+vertrouwen+dat+zij%2C+wanneer+zij+met+overheidsinstanties+communiceren%2C+dit+doen+in+een+veilige+en+betrouwbare+omgeving+en+volledig+in+overeenstemming+met+de+relevante+regelgeving%2C+zoals+de+verordening+en+richtlijn+inzake+gegevensbescherming+en+de+verordening+over+elektronische+identificatie+en+vertrouwensdiensten.")});
+														dataProperties.push({conceptid:"id-c96df263486c42a6b77575e3f3f920b7", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-c96df263486c42a6b77575e3f3f920b7", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-c96df263486c42a6b77575e3f3f920b7", contentid:"id-0a9633cff56f47729322e66840d7b698", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-c96df263486c42a6b77575e3f3f920b7", contentid:"id-d0b5457477184ca6ab336f02f8c84d9d", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-c96df263486c42a6b77575e3f3f920b7", contentid:"id-58816be6caff42438f416bed3b0f9123", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-c96df263486c42a6b77575e3f3f920b7", contentid:"id-898afd84c7e64922993b515df6b4fc56", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-2f3254031f5d47d49c8cc11578bbff12", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-2f3254031f5d47d49c8cc11578bbff12", type:"ArchimateDiagramModel", name:decodeURL("P09+-+Meertaligheid"), documentation:decodeURL("Europese+publieke+diensten+kunnen+in+principe+door+iedereen+in+elke+lidstaat+worden+gebruikt.+Daarom+moet+bij+het+ontwerpen+daarvan+zorgvuldig+rekening+worden+gehouden+met+meertaligheid.+Burgers+in+Europa+ondervinden+vaak+problemen+bij+het+benaderen+en+gebruiken+van+digitale+publieke+diensten+als+deze+niet+beschikbaar+zijn+in+de+talen+die+zij+spreken.+Er+moet+een+balans+worden+gevonden+tussen+de+verwachtingen+van+burgers+en+bedrijven+om+in+hun+eigen+taal+of+voorkeurstaal+bediend+te+worden%2C+en+de+mogelijkheden+van+overheidsinstanties+in+de+lidstaten+om+diensten+in+alle+offici%C3%ABle+EU%E2%80%91talen+aan+te+bieden.")});
+														dataProperties.push({conceptid:"id-2f3254031f5d47d49c8cc11578bbff12", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-2f3254031f5d47d49c8cc11578bbff12", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-2f3254031f5d47d49c8cc11578bbff12", contentid:"id-0a9633cff56f47729322e66840d7b698", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-2f3254031f5d47d49c8cc11578bbff12", contentid:"id-80a9f879e53743fdb349f27c3e5da161", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-2f3254031f5d47d49c8cc11578bbff12", contentid:"id-58816be6caff42438f416bed3b0f9123", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-2f3254031f5d47d49c8cc11578bbff12", contentid:"id-a01d5780ff3c4621bc5d01333eae9f6b", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-feff2b5cd0784d148ea6521585a40aa1", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-feff2b5cd0784d148ea6521585a40aa1", type:"ArchimateDiagramModel", name:decodeURL("P10+-+Administratieve+vereenvoudiging"), documentation:decodeURL("Waar+mogelijk+zouden+overheidsorganisaties+moeten+streven+naar+het+stroomlijnen+en+vereenvoudigen+van+hun+administratieve+processen+door+deze+te+verbeteren+of+elk+proces+te+verwijderen+dat+geen+publieke+waarde+oplevert.+Administratieve+vereenvoudiging+kan+bedrijven+en+burgers+helpen+de+administratieve+lasten+te+verminderen+die+samenhangen+met+het+voldoen+aan+EU%E2%80%91wetgeving+of+nationale+verplichtingen.")});
+														dataProperties.push({conceptid:"id-feff2b5cd0784d148ea6521585a40aa1", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-feff2b5cd0784d148ea6521585a40aa1", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-feff2b5cd0784d148ea6521585a40aa1", contentid:"id-b59636b1878b4932978fb1c3950e5e89", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-feff2b5cd0784d148ea6521585a40aa1", contentid:"id-367d7753beef4f0f887aeb48709bf2d1", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-feff2b5cd0784d148ea6521585a40aa1", contentid:"id-ead83d83bfba4697b43fcd166933c302", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-feff2b5cd0784d148ea6521585a40aa1", contentid:"id-6f18ba1c1f014c2aac1dff1f4781bc6f", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-ed618a4a45be4a80b776e61b5c0a2e16", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-ed618a4a45be4a80b776e61b5c0a2e16", type:"ArchimateDiagramModel", name:decodeURL("P11+-+Bewaring+van+informatie"), documentation:decodeURL("Wetgeving+vereist+dat+beslissingen+en+gegevens+worden+opgeslagen+en+gedurende+een+bepaalde+periode+toegankelijk+blijven.+Dit+betekent+dat+dossiers+en+informatie+in+elektronische+vorm+die+door+overheidsorganisaties+worden+bewaard+ter+documentatie+van+procedures+en+besluiten%2C+moeten+worden+behouden+en+indien+nodig+moeten+worden+omgezet+naar+nieuwe+dragers+wanneer+oude+dragers+verouderd+raken.+Het+doel+is+ervoor+te+zorgen+dat+dossiers+en+andere+vormen+van+informatie+leesbaar%2C+betrouwbaar+en+integer+blijven+en+zo+lang+toegankelijk+zijn+als+nodig%2C+met+inachtneming+van+bepalingen+over+beveiliging+en+privacy.")});
+														dataProperties.push({conceptid:"id-ed618a4a45be4a80b776e61b5c0a2e16", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-ed618a4a45be4a80b776e61b5c0a2e16", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-ed618a4a45be4a80b776e61b5c0a2e16", contentid:"id-b59636b1878b4932978fb1c3950e5e89", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-ed618a4a45be4a80b776e61b5c0a2e16", contentid:"id-ef30b103d16c4dff81ff894aba7d3429", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-ed618a4a45be4a80b776e61b5c0a2e16", contentid:"id-ead83d83bfba4697b43fcd166933c302", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-ed618a4a45be4a80b776e61b5c0a2e16", contentid:"id-b9bdfdb341fd4e3f89e4792b69edbb94", contenttype:"AggregationRelationship"});
+
+															
+													
+
+										dataFoldersContent.push({folderid:"id-ce8f5906a57f449a9ace776cfd42c49b", contentid:"id-8f3a14d68e4640af8cdc53f3f7ceae7b", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-8f3a14d68e4640af8cdc53f3f7ceae7b", type:"ArchimateDiagramModel", name:decodeURL("P12+-+Beoordeling+van+doeltreffendheid+en+effici%C3%ABntie"), documentation:decodeURL("Er+zijn+veel+manieren+om+de+waarde+van+interoperabele+Europese+publieke+diensten+in+kaart+te+brengen%2C+waaronder+overwegingen+zoals+rendement+op+investering%2C+totale+eigendomskosten%2C+het+niveau+van+flexibiliteit+en+aanpasbaarheid%2C+verminderde+administratieve+lasten%2C+effici%C3%ABntie%2C+verminderd+risico%2C+transparantie%2C+vereenvoudiging%2C+verbeterde+werkmethoden+en+het+niveau+van+gebruikerstevredenheid.")});
+														dataProperties.push({conceptid:"id-8f3a14d68e4640af8cdc53f3f7ceae7b", propkey:decodeURL("Externe+verwijzing"), propvalue:decodeURL("https%3A%2F%2Finteroperable-europe.ec.europa.eu%2Fcollection%2Fiopeu-monitoring%2Fsolution%2Feuropean-interoperability-framework-eif-toolbox%2Funderlying-principles")});
+
+													dataViewsContent.push({viewid:"id-8f3a14d68e4640af8cdc53f3f7ceae7b", contentid:"id-47808e50af0044bdac741fea9565fd46", contenttype:"Grouping"});
+															dataViewsContent.push({viewid:"id-8f3a14d68e4640af8cdc53f3f7ceae7b", contentid:"id-b59636b1878b4932978fb1c3950e5e89", contenttype:"Grouping"});
+																	dataViewsContent.push({viewid:"id-8f3a14d68e4640af8cdc53f3f7ceae7b", contentid:"id-beee68aee573451193b3e234d26ee3c8", contenttype:"Principle"});
+															
+													
+
+																			dataViewsContent.push({viewid:"id-8f3a14d68e4640af8cdc53f3f7ceae7b", contentid:"id-ead83d83bfba4697b43fcd166933c302", contenttype:"CompositionRelationship"});
+
+																					dataViewsContent.push({viewid:"id-8f3a14d68e4640af8cdc53f3f7ceae7b", contentid:"id-56d73a1d59ee4502b33ee6da6959a93a", contenttype:"AggregationRelationship"});
+
+															
+													
+
+
+
+
+
+
+
+						    alasql('CREATE TABLE Elements');
+						    alasql('CREATE TABLE Properties');
+						    alasql('CREATE TABLE Relationships');
+						    alasql('CREATE TABLE Views');
+						    alasql('CREATE TABLE ViewsContent');
+						    alasql('CREATE TABLE Folders');
+						    alasql('CREATE TABLE FoldersContent');
+
+						    alasql.tables.Elements.data = dataElements;
+						    alasql.tables.Properties.data = dataProperties;
+						    alasql.tables.Relationships.data = dataRelationships;
+						    alasql.tables.Views.data = dataViews;
+						    alasql.tables.ViewsContent.data = dataViewsContent;
+						    alasql.tables.Folders.data = dataFolders;
+						    alasql.tables.FoldersContent.data = dataFoldersContent;
+						</script> 
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
